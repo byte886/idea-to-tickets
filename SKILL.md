@@ -1,6 +1,6 @@
 ---
 name: idea-to-tickets
-description: "从想法到工单：把模糊需求一步步变成 Agent 可稳定执行的任务。四个可单用、可串联的模式——clarify 动手前反向追问对齐（grill-me）、spec 把共识写成带验收的规范（to-spec）、slice 把规范拆成可独立开工验收的垂直工单（to-tickets）、explain 用最小合适视图把代码/方案讲清楚（show-me）。适用于：让 AI 写代码/做复杂任务前的需求澄清、写需求/技术方案规范、把大任务拆成可并行工单、代码评审或讲解改动、以及非代码的选题/决策梳理。方法论与 IDE、任务系统、画图工具解耦，可在豆包/Claude Code/Cursor/Codex 间平移。"
+description: "从想法到工单：把模糊需求一步步变成 Agent 可稳定执行的任务。四个可单用、可串联的模式——clarify 动手前反向追问对齐（grill-me）、spec 把共识写成带验收的规范（to-spec）、slice 把规范拆成可独立开工验收的垂直工单（to-tickets）、explain 用最小合适视图把代码/方案讲清楚（show-me）。适用于：让 AI 写代码/做复杂任务前的需求澄清、写需求/技术方案规范、把大任务拆成可并行工单、代码评审或讲解改动、以及非代码的选题/决策梳理。方法论与 IDE、任务系统、画图工具解耦，可在豆包/Claude Code/Cursor/Codex 间平移。另含角色分工模块：项目架构师/开发/产品/秘书四个职能角色的分工协作，以及珠宝、股票等领域专家角色的扩展方法；用户以某角色身份提需求、需要多视角配合、或要新增业务专家角色时使用。"
 compatibility: "方法论/格式本身跨平台；随附脚本与运行环境仅在 macOS(Darwin) 实测，Windows/Linux 未适配。执行前先判平台(uname -s)，涉及脚本/命令时非 macOS 停止并告知需另行适配、不硬跑；将来补齐后按平台分流并分别标注验证状态"
 ---
 
@@ -25,6 +25,8 @@ compatibility: "方法论/格式本身跨平台；随附脚本与运行环境仅
 
 前三个是一条**纵向流水线**（想清楚 → 写下来 → 拆成单），第四个 **explain 横向贯穿**（澄清、评审、交付时都能用）。
 
+**另有一个执行环节模块（不是第五个模式）**：[`references/role-collaboration.md`](references/role-collaboration.md) 解决"拆完工单后**派谁、以什么角色视角执行、多角色怎么配合**"——含四个固定职能角色（项目架构师 / 开发 / 产品 / 秘书）和可按业务扩展的领域专家角色（珠宝专家、股票专家等）。用户报角色名（如"产品经理，做 X"）、需要多视角分工、或没指定角色需要先确认时读它。
+
 ## 2. 如何使用（豆包是"软模式"，不会自动触发）
 
 本技能没有后台钩子，靠**你点名**进入；进入后按对应模式的 SOP 执行。开场话术示例：
@@ -46,7 +48,7 @@ compatibility: "方法论/格式本身跨平台；随附脚本与运行环境仅
   └ clarify  一次一问 + 先给推荐 + 能自查就不问，问到共识（产出共识小结）
      └ spec  记决策不记实现、先找可测的"接缝"，写带验收的规范
         └ slice  按功能纵向切成"垂直切片/曳光弹"工单 + 只标真实依赖（可并行）
-           └ [交给编程 Agent 实现] → 评审（explain 把改动讲清楚）
+           └ [按 role-collaboration 定执行角色 → 交给编程 Agent 实现] → 评审（explain 把改动讲清楚）
 ```
 
 - **只澄清**：需求模糊、还没决定做不做/怎么做 → 单用 clarify（非代码的选题、决策也适用）。
@@ -87,6 +89,7 @@ compatibility: "方法论/格式本身跨平台；随附脚本与运行环境仅
 | 把对齐结果写成规范 | `references/mode-2-spec.md` | `templates/spec.md` |
 | 把规范拆成工单、排依赖 | `references/mode-3-slice.md` | `templates/ticket.md`、`templates/tickets-index.md` |
 | 选视图讲清代码/方案 | `references/mode-4-explain.md` | — |
+| 定执行角色、多角色分工、扩展领域专家 | `references/role-collaboration.md` | — |
 | 决定走哪档、怎么串、避坑 | `references/playbook.md` | — |
 
 ## 8. 来源与边界
