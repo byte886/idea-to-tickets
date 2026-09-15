@@ -1,15 +1,14 @@
 ---
 name: idea-to-tickets
 description: "从想法到工单：把模糊需求一步步变成 Agent 可稳定执行的任务。四个可单用、可串联的模式——clarify 动手前反向追问对齐（grill-me）、spec 把共识写成带验收的规范（to-spec）、slice 把规范拆成可独立开工验收的垂直工单（to-tickets）、explain 用最小合适视图把代码/方案讲清楚（show-me）。适用于：让 AI 写代码/做复杂任务前的需求澄清、写需求/技术方案规范、把大任务拆成可并行工单、代码评审或讲解改动、以及非代码的选题/决策梳理。方法论与 IDE、任务系统、画图工具解耦，可在豆包/Claude Code/Cursor/Codex 间平移。另含角色分工模块：项目架构师/开发/产品/秘书四个职能角色的分工协作，以及珠宝、股票等领域专家角色的扩展方法；用户以某角色身份提需求、需要多视角配合、或要新增业务专家角色时使用。"
-compatibility: "方法论/格式本身跨平台；随附脚本与运行环境仅在 macOS(Darwin) 实测，Windows/Linux 未适配。执行前先判平台(uname -s)，涉及脚本/命令时非 macOS 停止并告知需另行适配、不硬跑；将来补齐后按平台分流并分别标注验证状态"
+compatibility: "纯方法论与 Markdown 模板，不随附可执行脚本、不依赖操作系统，Windows/macOS/Linux 通用、无需判平台；文中提到的外部环节（IDE 编程 Agent、任务系统、okf-wiki 记忆、doubao-visualization 渲染等）是可替换插槽，其平台要求由对应工具决定。"
 ---
 
 # idea-to-tickets · 从想法到工单（AI 软件工程四步法）
 
-## 平台适用（执行前先读）
-- 方法论/格式本身跨平台；但**随附脚本与本套运行环境仅在 macOS（Darwin）实测**。
-- 动手前先 `uname -s` 判平台：Darwin 走现有流程；Windows/Linux 只能使用纯方法论部分，一旦涉及脚本/命令，停下提示需另行适配，不硬跑。
-- 以后补齐 Windows 后也保留“先判平台 → 按平台分流”的结构，分别标注各平台验证状态。
+## 平台适用
+- 本技能是**纯方法论 + Markdown 模板**，不含可执行脚本、不依赖操作系统，Windows / macOS / Linux 均可直接使用，无需判平台。
+- 文中提到的外部环节（IDE 编程 Agent、任务系统、okf-wiki 记忆、doubao-visualization 渲染等）是可替换插槽，其平台要求由对应工具决定，与本方法论无关。
 
 > 内核来源：Matt Pocock 开源 Skills 的 `grill-me` / `to-spec` / `to-tickets` / `show-me`（本技能是其**与工具解耦的方法论封装**：不依赖特定 IDE、命令或 GitHub，只固化"怎么想、怎么问、怎么拆、怎么讲"）。
 > 一句话：**把脑子里模糊的想法，逐步消除歧义，变成 Agent 真正能执行、能验收的东西。**
