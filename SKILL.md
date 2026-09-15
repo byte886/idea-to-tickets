@@ -1,7 +1,7 @@
 ---
 name: idea-to-tickets
-description: "从想法到工单：把模糊需求一步步变成 Agent 可稳定执行的任务。四个可单用、可串联的模式——clarify 动手前反向追问对齐（grill-me）、spec 把共识写成带验收的规范（to-spec）、slice 把规范拆成可独立开工验收的垂直工单（to-tickets）、explain 用最小合适视图把代码/方案讲清楚（show-me）。适用于：让 AI 写代码/做复杂任务前的需求澄清、写需求/技术方案规范、把大任务拆成可并行工单、代码评审或讲解改动、以及非代码的选题/决策梳理。方法论与 IDE、任务系统、画图工具解耦，可在豆包/Claude Code/Cursor/Codex 间平移。另含角色分工模块：项目架构师/开发/产品/秘书四个职能角色的分工协作，以及珠宝、股票等领域专家角色的扩展方法；用户以某角色身份提需求、需要多视角配合、或要新增业务专家角色时使用。"
-compatibility: "纯方法论与 Markdown 模板，不随附可执行脚本、不依赖操作系统，Windows/macOS/Linux 通用、无需判平台；文中提到的外部环节（IDE 编程 Agent、任务系统、okf-wiki 记忆、doubao-visualization 渲染等）是可替换插槽，其平台要求由对应工具决定。"
+description: 把模糊需求变成 Agent 可执行的工单。四个可单用可串联的模式：clarify 动手前反向追问对齐、spec 把共识写成带验收的规范、slice 把规范拆成可独立验收的工单、explain 用最小视图讲清代码/方案。适用于写代码前的需求澄清、写技术规范、大任务拆成可并行工单、代码评审或讲解改动、非代码选题/决策梳理；另含架构师/开发/产品/秘书角色分工与领域专家扩展。与 IDE/任务系统解耦，可跨平台平移。
+compatibility: "纯方法论+Markdown 模板，无脚本、不依赖操作系统，Win/macOS/Linux 通用、无需判平台；文中外部环节(IDE Agent、任务系统、okf-wiki、doubao-visualization)是可替换插槽，平台要求由对应工具决定。"
 ---
 
 # idea-to-tickets · 从想法到工单（AI 软件工程四步法）
